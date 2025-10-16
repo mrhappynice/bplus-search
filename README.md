@@ -1,4 +1,4 @@
-bplus-Search
+bplus🤷🏻‍♂️ Search
 ---
 - SearXNG
 - No MCP needed
