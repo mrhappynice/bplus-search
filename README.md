@@ -2,7 +2,7 @@ bplus-Search
 ---
 - SearXNG
 - No MCP needed
-- Setup SearXNG - [Easy Setup](https://github.com/mrhappynice/lmstudio-dev/tree/main/easy-searx-mcp)
+- Setup SearXNG without MCP step - [Easy Setup](https://github.com/mrhappynice/lmstudio-dev/tree/main/easy-searx-mcp)
 - Run LM Studio, Ollama, etc(correct port and creds in .env)
 - dl
   - ```sh
