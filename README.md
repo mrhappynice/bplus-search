@@ -1,4 +1,5 @@
 bplus🤷🏻‍♂️ Search
+Local LLM powered private search
 ---
 - SearXNG
 - No MCP needed
