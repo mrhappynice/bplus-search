@@ -1,8 +1,9 @@
-bplus🤷🏻‍♂️ Search
-Local LLM powered private search
+# bplus🤷🏻‍♂️ Search  
+
+### Local LLM powered private search
 ---
 - SearXNG
-- No MCP needed
+- No MCP needed, custom backend, low context yayyyy:)
 - Setup SearXNG without MCP step - [Easy Setup](https://github.com/mrhappynice/lmstudio-dev/tree/main/easy-searx-mcp)
 - Run LM Studio, Ollama, etc(correct port and creds in .env)
 - dl
