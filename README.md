@@ -20,5 +20,7 @@
   - connect to frontend and search, loser.. :)
  
   - dev notes, install sea builder junk:
-    - npm i -D esbuild postject
+    - ```sh
+      npm i -D esbuild postject
+      ```
 
