@@ -19,8 +19,13 @@
     ```
   - connect to frontend and search, loser.. :)
  
-  - dev notes, install sea builder junk:
-    - ```sh
-      npm i -D esbuild postject
-      ```
+- dev notes, install sea builder junk:
+   - ```sh
+     npm i -D esbuild postject
+     ```
+- Build it:
+  - ```sh
+    chmod +x build-sea.sh
+    ./build-sea.sh server.js my-app
+    ```
 
