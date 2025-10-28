@@ -17,4 +17,8 @@
   - ```sh
     npm run
     ```
-  - connect to frontend and search, loser.. :)    
+  - connect to frontend and search, loser.. :)
+ 
+  - dev notes, install sea builder junk:
+    - npm i -D esbuild postject
+
