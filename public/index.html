@@ -658,7 +658,6 @@ You are a helpful assistant that summarizes web search results and formats your 
                             ),
                         );
                     chatContainer.scrollTop = chatContainer.scrollHeight;
-                    researchPanel.classList.remove("visible");
                 } catch (error) {
                     console.error("Failed to load conversation:", error);
                 }
@@ -672,7 +671,6 @@ You are a helpful assistant that summarizes web search results and formats your 
                 document
                     .querySelectorAll("#conversations-list li.active")
                     .forEach((li) => li.classList.remove("active"));
-                researchPanel.classList.remove("visible");
             }
             newChatBtn.addEventListener("click", startNewChat);
 
