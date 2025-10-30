@@ -1,6 +1,6 @@
 param(
   [string]$Entry = "server.js",
-  [string]$App   = "my-app.exe"
+  [string]$App   = "bplus-search.exe"
 )
 
 $Bundle = "bundle.cjs"
