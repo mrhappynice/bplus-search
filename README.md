@@ -15,7 +15,7 @@
     npm install
     ```
   - ```sh
-    npm run
+    npm start
     ```
   - connect to frontend and search, loser.. :)
  
