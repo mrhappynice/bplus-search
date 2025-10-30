@@ -21,8 +21,8 @@
     ```
 - Run:
   - ```sh
-    ./my-app
+    ./bplus-search
     ```
 - Portable exec - you need the better-sqlite3.node file in ```bplus-search/node_modules/better-sqlite3/build/Release/better-sqlite3.node```
-  - You just need the ```my-app``` executable with the ```node_modules``` folder (only the one better-sqlite3.node file is needed in the folder tree)
+  - You just need the ```bplus-search``` executable with the ```node_modules``` folder (only the one better-sqlite3.node file is needed in the folder tree)
 
