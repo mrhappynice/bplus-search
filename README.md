@@ -17,7 +17,7 @@
 - Build it:
   - ```sh
     chmod +x build-sea.sh
-    ./build-sea.sh server.js my-app
+    ./build-sea.sh
     ```
 - Run:
   - ```sh
