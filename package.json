@@ -1,5 +1,5 @@
 {
-  "name": "searxng-direct",
+  "name": "bplus-search",
   "version": "1.0.0",
   "description": "Direct SearXNG interface with AI summarization.",
   "main": "server.js",
