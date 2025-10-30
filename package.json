@@ -8,9 +8,15 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "better-sqlite3": "^11.1.2",
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
+    "multer": "^2.0.2",
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.11",
+    "postject": "^1.0.0-alpha.6"
   }
 }

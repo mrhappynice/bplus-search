@@ -1,0 +1,8 @@
+{
+  "main": "./bundle.cjs",
+  "output": "./sea-prep.blob",
+  "useCodeCache": true,
+  "assets": {
+    "public/index.html": "./public/index.html"
+  }
+}
