@@ -1,0 +1,16 @@
+{
+  "name": "SearXNG on Codespaces",
+  "image": "searxng/searxng:latest",
+  "overrideCommand": false,
+  "containerEnv": {
+    "SEARXNG_BASE_URL": "http://127.0.0.1:8080/",
+    "SEARXNG_SECRET": "replace-this-with-a-long-random-string"
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "SearXNG",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
