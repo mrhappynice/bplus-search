@@ -18,11 +18,11 @@
     ```
 - Build it:
   - ```sh
-    chmod +x build-sea.sh
+    chmod +x build-sea.sh run-bps.sh
     ./build-sea.sh
     ```
 - Run:
   - ```sh
-    ./bplus-search-nosearx
+    ./run-bps.sh
     ```
 - You just need the ```bplus-search-nosearx``` executable with the ```node_modules``` folder 
