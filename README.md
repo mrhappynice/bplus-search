@@ -1,6 +1,6 @@
 # bplus🤷🏻‍♂️ Search 
 v0.3
-### Local LLM powered private web search built in with connection to SearXNG instance.
+### Local LLM powered private web search built in and with optional connection to SearXNG instance.
 
 ---
 
