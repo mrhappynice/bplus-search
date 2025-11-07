@@ -6,8 +6,6 @@ import cors from 'cors';
 import 'dotenv/config';
 import os from 'os';
 import { fileURLToPath } from 'url';
-import { nativeSearch } from './adapters/native/index.js';
-import { suggest } from './adapters/native/suggest.js';
 
 // Node.js built-in modules
 const sea = require('node:sea');
@@ -137,7 +135,6 @@ app.get('/', (req, res) => {
 // Env & Sanity Checks (Unchanged)
 // ---------------------------
 const { SEARXNG_URL, AUTH_USERNAME, AUTH_PASSWORD, LMSTUDIO_API_BASE, OPENAI_API_KEY, OPENROUTER_API_KEY, GOOGLE_API_KEY } = process.env;
-const USE_NATIVE = process.env.USE_NATIVE === '1'; 
 if (!SEARXNG_URL) {
   console.error('FATAL ERROR: Missing SEARXNG_URL environment variable.');
   process.exit(1);
@@ -277,14 +274,6 @@ app.get('/api/research/files', (req, res) => {
     }
 });
 
-app.get('/api/suggest', async (req, res) => {
-    const q = String(req.query.q || '').trim();
-    if (!q) return res.json([]);
-    try { res.json(await suggest(q)); }
-    catch { res.json([]); }
-});
-
-
 app.post('/api/research/load', (req, res) => {
     let { filename } = req.body;
     if (!filename) return res.status(400).json({ error: 'Filename is required.' });
@@ -392,24 +381,17 @@ app.post('/api/conversations/:id/query', async (req, res) => {
     try {
         db.prepare('INSERT INTO messages (conversation_id, role, content) VALUES (?, ?, ?)').run(conversationId, 'user', query);
         
-let results = [];
-if (!USE_NATIVE) {
-  // Keep current SearXNG path
-  const searxngHeaders = {};
-  if (AUTH_USERNAME && AUTH_PASSWORD) searxngHeaders['Authorization'] =
-    `Basic ${Buffer.from(`${AUTH_USERNAME}:${AUTH_PASSWORD}`).toString('base64')}`;
-  let searxngUrl = `${SEARXNG_URL}/search?q=${encodeURIComponent(query)}&format=json`;
-  if (timeframe && ['day', 'week', 'month'].includes(timeframe)) searxngUrl += `&time_range=${timeframe}`;
-  const sResp = await fetch(searxngUrl, { headers: searxngHeaders });
-  if (!sResp.ok) throw new Error(`SearXNG failed: ${sResp.status} ${sResp.statusText}`);
-  const sData = await sResp.json();
-  results = (sData.results || []).map(r => ({ title: r.title, content: r.content, url: r.url }));
-} else {
-  // NEW: native providers
-  results = await nativeSearch(query, { timeframe, safesearch: 1, timeoutMs: 12000 });
-}
-sendEvent(res, 'results', results);
-
+        const searxngHeaders = {};
+        if (AUTH_USERNAME && AUTH_PASSWORD) searxngHeaders['Authorization'] = `Basic ${Buffer.from(`${AUTH_USERNAME}:${AUTH_PASSWORD}`).toString('base64')}`;
+        let searxngUrl = `${SEARXNG_URL}/search?q=${encodeURIComponent(query)}&format=json`;
+        if (timeframe && ['day', 'week', 'month'].includes(timeframe)) searxngUrl += `&time_range=${timeframe}`;
+        
+        console.log(`Querying SearXNG for convo ${conversationId}: "${query}" [${timeframe || 'all'}]`);
+        const sResp = await fetch(searxngUrl, { headers: searxngHeaders });
+        if (!sResp.ok) throw new Error(`SearXNG failed: ${sResp.status} ${sResp.statusText}`);
+        const sData = await sResp.json();
+        const results = (sData.results || []).map(r => ({ title: r.title, content: r.content, url: r.url }));
+        sendEvent(res, 'results', results);
 
         if (results.length === 0) {
             const noResultsMsg = 'No search results found to summarize.';
