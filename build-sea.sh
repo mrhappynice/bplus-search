@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ENTRY="${1:-server.js}"
-APP="${2:-bplus-search-nosearx}"          # no extension; macOS/Linux binary
+APP="${2:-bplus-search}"          # no extension; macOS/Linux binary
 BUNDLE="bundle.cjs"
 BLOB="sea-prep.blob"
 CONFIG="sea-config.json"
