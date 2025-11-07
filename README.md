@@ -1,6 +1,5 @@
-# bplus🤷🏻‍♂️ Search - nosearx
-
-### Local LLM powered private search
+# bplus🤷🏻‍♂️ Search 
+### Local LLM powered private web search built in with connection to SearXNG instance.
 
 ---
 
