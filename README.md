@@ -6,7 +6,7 @@
 
 - Free API providers. 
 - No MCP needed, custom backend, low context yayyyy
-- No need to setup search, included, edit providers to customize
+- SearXNG optional, connect to SearXNG instance or use built-in web search, edit providers to customize
 - Run LM Studio, Ollama, etc(port 1234 and creds in .env) then run this
 - dl
   - ```sh
