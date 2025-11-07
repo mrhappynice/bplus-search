@@ -9,7 +9,7 @@
 - Run LM Studio, Ollama, etc(port 1234 and creds in .env) then run this
 - dl
   - ```sh
-    git clone https://github.com/mrhappynice/bplus-search-nosearx.git && cd bplus-search-nosearx
+    git clone https://github.com/mrhappynice/bplus-search.git && cd bplus-search
     ```
 - Install: 
   - ```sh
@@ -24,4 +24,4 @@
   - ```sh
     ./run-bps.sh
     ```
-- You just need the ```bplus-search-nosearx``` executable with the ```node_modules``` folder 
+- You just need the ```bplus-search``` executable with the ```node_modules``` folder 
