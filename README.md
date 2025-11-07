@@ -26,3 +26,13 @@ v0.3
     ./run-bps.sh
     ```
 - You just need the ```bplus-search``` executable with the ```node_modules``` folder 
+
+- Model run example, download latest llama.cpp compatible version with your system and:
+  - ```sh
+    ./llama-server -m Qwen3-0.6B-Q8_0.gguf -c 8000 -ngl 99 --port 1234
+    ```
+    or:
+    ```sh
+    ./llama-server -hf unsloth/Qwen3-0.6B-GGUF:Q8_0 -c 8000 -ngl 99 --port 1234
+
+    ```
