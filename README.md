@@ -1,14 +1,16 @@
-# bplus🤷🏻‍♂️ Search  
+# bplus🤷🏻‍♂️ Search - nosearx
 
 ### Local LLM powered private search
+
 ---
-- Search assistant, SearXNG, local and API providers. 
+
+- Free API providers. 
 - No MCP needed, custom backend, low context yayyyy
-- Setup SearXNG without MCP step - [Easy Setup](https://github.com/mrhappynice/lmstudio-dev/tree/main/easy-searx-mcp)
-- Run LM Studio, Ollama, etc(correct port and creds in .env)
+- No need to setup search, included, edit providers to customize
+- Run LM Studio, Ollama, etc(port 1234 and creds in .env) then run this
 - dl
   - ```sh
-    git clone https://github.com/mrhappynice/bplus-search.git && cd bplus-search
+    git clone https://github.com/mrhappynice/bplus-search-nosearx.git && cd bplus-search-nosearx
     ```
 - Install: 
   - ```sh
@@ -21,7 +23,6 @@
     ```
 - Run:
   - ```sh
-    ./bplus-search
+    ./bplus-search-nosearx
     ```
-- Portable exec - you need the better-sqlite3.node file in ```bplus-search/node_modules/better-sqlite3/build/Release/better-sqlite3.node```
-  - You just need the ```bplus-search``` executable with the ```node_modules``` folder 
+- You just need the ```bplus-search-nosearx``` executable with the ```node_modules``` folder 
