@@ -1,4 +1,6 @@
 # bplus🤷🏻‍♂️ Search 
+NO LONGER MAINTAINING THIS VERSION. MOVED TO RUST. check out [bplus-searchrs](https://github.com/mrhappynice/bplus-searchrs) for current version and newer features.
+
 v0.3
 ### Local LLM powered private web search built in and with optional connection to SearXNG instance.
 
